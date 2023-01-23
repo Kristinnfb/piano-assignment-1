@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Assignment 1</title>
+</head>
+
+<body>
+    <!-- Responsive image appear when main container gets smaller than 600 px-->
+    <img src="/public/oops.jpg" class="responsive_img">
+    <p class="responsive_img" id="error_text">This website requires at least 600px screen width.</p>
+    
+    <div id="main_container">
+        <div id="action_bar">
+            <!-- Menu container left holding a text, dropdown menu and a play button -->
+            <div class="menu_container_left">
+                <p id="padding_menu_left">Tune: 
+                    <select name="choises" id="drop_menu">
+                        <option value="piano" >Für Elise</option>
+                        <option value="print_view">Print View</option>
+                    </select>
+                    <button class="btn_container">
+                        <img src="public/play.png" alt="play_button" class="style_btn" >
+                    </button>
+                </p>
+            </div>
+            <!-- Menu container right holding a text, record and stop button --> 
+            <div class="menu_container_right">
+                <p id="padding_menu_right">Record:  
+                    <button class="btn_container">
+                        <img src="public/record.png" alt="record_button" class="style_btn" >
+                    </button>
+                    <button class="btn_container">
+                        <img src="public/stop.png" alt="stop_button" class="style_btn" >
+                    </button>
+                </p>
+            </div>   
+        </div>
+
+        <!-- Piano container holding the piano keys -->
+        <div class="key_container">
+            <div class="white_keys"><p>C4 <br> (a)</p></div>
+                <div class="black_keys"><p>C <br> (w)</p></div>
+            <div class="white_keys"><p>D4 <br> (s)</p></div>
+                <div class="black_keys"><p>D#4 <br> (e)</p></div>
+            <div class="white_keys"><p>E4 <br> (d)</p></div>
+            <div class="white_keys"><p>F4 <br> (f)</p></div>
+                <div class="black_keys"><p>F#4 <br> (t)</p></div>
+            <div class="white_keys"><p>G4 <br> (g)</p></div>
+                <div class="black_keys"><p>G#4 <br> (y)</p></div>
+            <div class="white_keys"><p>A4 <br> (h)</p></div>
+                <div class="black_keys"><p>Bb4 <br> (u)</p></div>
+            <div class="white_keys"><p>B4 <br> (j)</p></div>
+            <div class="white_keys"><p>C5 <br> (k)</p></div>
+                <div class="black_keys"><p>C#5 <br> (o)</p></div>
+            <div class="white_keys"><p>D5 <br> (l)</p></div>
+                <div class="black_keys"><p>D#5 <br> (p)</p></div>
+            <div class="white_keys"><p>E5 <br> (;)</p></div>
+        </div>
+    </div>
+
+</body>
+</html>
