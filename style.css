@@ -1,6 +1,5 @@
 
 body{
-    background-color: rgba(255,255,255,255);
     margin: 0 auto;
     padding: 5px;
 }
@@ -8,11 +7,11 @@ body{
 
 /*-- make sure the oops image is not visible unless it meets requierements --*/
 .responsive_img{
-    width: 100%;
-    height: 100%;
     margin: auto;
     padding-bottom: 20px;
     display: none;
+    width: 100%;
+    height: 100%;
 }
 
 #error_text{
@@ -21,47 +20,46 @@ body{
 
 /*-- The main container that holds everything inside the purple area --*/
 #main_container{
-    width: 100%;
-    height: 18rem;
     margin: auto;
     padding-top: 2%;
     padding-bottom: 2%;
+    display: block;
+    width: 100%;
+    height: 18rem;
     background-color: rgba(48,28,130,255);
     border-radius: 5px;
-    display: block;
 }
 
 /*-- The container that holds the green action bar and it´s contents --*/
 #action_bar{
+    margin: auto;
+    display: flex;
     width: 75%;
     height: 20%;
-    margin: auto;
     background-color: rgba(0,128,0,255);
-    display: flex;
 }
 
 /*-- The container that holds the contents on the left side of the green action bar --*/
 .menu_container_left{
+    margin-left: 2%;
+    gap: 3%;
+    display: flex;
+    align-items: center;
     width: 50%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    gap: 3%;
-    margin-left: 2%;
 }
 
+/*-- The container that holds the contents on the right side of the green action bar --*/
 .menu_container_right{
-    width: 20%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
     margin-right: 2%;
     gap: 2%;
+    display: flex;
     justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+    width: 20%;
+    height: 100%;
 }
-
-
 
 /*-- drop down menu adjustments --*/
 #drop_menu{
@@ -75,11 +73,10 @@ body{
 }
 
 .style_btn{
-    width: 1rem;
-    height: 1rem;
     display: flex;
     align-items: center;
-
+    width: 1rem;
+    height: 1rem;
     background-color: rgba(239,239,239,255);
 }
 
@@ -87,27 +84,28 @@ body{
     opacity: 40%;
 }
 
-
+/* -- The container that holds the piano keys --*/
 .key_container{
-    width: 75%;
-    height: 70%;
     margin: auto;
     margin-top: 2%;
-    box-sizing: border-box;
     display: flex;
+    box-sizing: border-box;
+    width: 75%;
+    height: 70%;
     border-style: solid;
 }
 
+/*-- The white keys adjustments--*/
 .white_keys {
+    margin: auto;
+    z-index: 1;
     width: 20%;
     height: 100%;
-    margin: auto;
-    background-color: rgba(255,255,255,255);
-    cursor: pointer;
     box-sizing: border-box;
+    background-color: rgba(255,255,255,255);
     border-left: 0.15rem solid rgba(0,0,0,255);
     border-right: 0.15rem solid rgba(0,0,0,255);
-    z-index: 1;
+    cursor: pointer;
 }
 
 .white_keys:first-child {
@@ -119,34 +117,40 @@ body{
 }
 
 .white_keys p{
-    color: rgba(0,0,0,255);;
-    font-size: 0.7rem;
     margin: auto;
-    text-align: center;
     padding-top: 6rem;
+    font-size: 0.7rem;
+    color: rgba(0,0,0,255);;
+    text-align: center;
 }
 
 .white_keys:active {
     background-color: rgba(128,128,128,255);
 }
 
+
+/*-- The black keys adjustments--*/
 .black_keys {
+    margin: 0 -2.5% 0 -2.5%;
+    z-index: 2;
+    box-sizing: border-box;
     width: 10%;
     height: 65%;
     background-color: rgba(0,0,0,255);
-    margin: 0 -2.5% 0 -2.5%;
     cursor: pointer;
-    box-sizing: border-box;
-    z-index: 2;
+    
+    /* -- doesnt work --*/
     print-color-adjust: exact;
 }
 
 .black_keys p{
-    color: rgba(255,255,255,255);
-    font-size: 0.7rem;
-    text-align: center;
     margin: auto;
     padding-top: 3rem;
+    font-size: 0.7rem;
+    text-align: center;
+    color: rgba(255,255,255,255);
+    
+    /* -- doesnt work --*/
     print-color-adjust: exact;
 }
 
@@ -154,6 +158,8 @@ body{
     background-color: rgba(128,128,128,255);
 }
 
+
+/*-- media queries --*/
 @media only print{
 
     #main_container{
@@ -165,7 +171,7 @@ body{
     }
 
     .key_container{
-        border-color: black;
+        border-color: rgba(0,0,0,255);
         border-width: 0.25rem;
     }
 }
