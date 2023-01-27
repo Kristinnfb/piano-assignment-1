@@ -21,8 +21,8 @@ body{
 
 /*-- The main container that holds everything inside the purple area --*/
 #main_container{
-    width: 1000px;
-    height: 17rem;
+    width: 100%;
+    height: 18rem;
     margin: auto;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -38,54 +38,52 @@ body{
     margin: auto;
     background-color: rgba(0,128,0,255);
     display: flex;
-    align-items: center;
 }
 
 /*-- The container that holds the contents on the left side of the green action bar --*/
 .menu_container_left{
-    width: 70%;
+    width: 50%;
     height: 100%;
     display: flex;
-    margin: auto;
-    margin: left;
-    padding-left: 2%;
     align-items: center;
+    gap: 3%;
+    margin-left: 2%;
 }
 
 .menu_container_right{
-    width: 35%;
+    width: 20%;
     height: 100%;
     display: flex;
-    margin: auto; 
     align-items: center;
+    flex-grow: 1;
+    margin-right: 2%;
+    gap: 2%;
+    justify-content: flex-end;
 }
 
-#padding_menu_right{
-    padding-right: 10%;
-} 
+
+
 /*-- drop down menu adjustments --*/
 #drop_menu{
-    width: 8rem;
-    height: 1.1rem;
-    margin: auto;
+    width: 70%;
+    height: 30%;
 }
 
 .btn_container{
     width: 2rem;
     height: 2rem;
-    margin: auto;
 }
 
 .style_btn{
     width: 1rem;
     height: 1rem;
-    margin: auto;
     display: flex;
     align-items: center;
+
     background-color: rgba(239,239,239,255);
 }
 
-.btn_container:hover{
+.btn_container:active{
     opacity: 40%;
 }
 
@@ -93,7 +91,6 @@ body{
 .key_container{
     width: 75%;
     height: 70%;
-    background-color: rgba(0,0,0,255);
     margin: auto;
     margin-top: 2%;
     box-sizing: border-box;
@@ -106,7 +103,8 @@ body{
     margin: auto;
     background-color: rgba(255,255,255,255);
     cursor: pointer;
-    border-right: 0.3rem solid rgba(0,0,0,255);
+    box-sizing: border-box;
+    border: 0.1rem solid rgba(0,0,0,255);
     z-index: 1;
 }
 
@@ -118,11 +116,7 @@ body{
     padding-top: 6rem;
 }
 
-.white_keys:last-child {
-    border-right: none;
-}
-
-.white_keys:hover {
+.white_keys:active {
     background-color: rgba(128,128,128,255);
 }
 
@@ -130,8 +124,9 @@ body{
     width: 10%;
     height: 65%;
     background-color: rgba(0,0,0,255);
-    margin: 0 -2.6% 0 -2.6%;
+    margin: 0 -2.5% 0 -2.5%;
     cursor: pointer;
+    box-sizing: border-box;
     z-index: 2;
 }
 
@@ -143,10 +138,25 @@ body{
     padding-top: 3rem;
 }
 
-.black_keys:hover {
+.black_keys:active {
     background-color: rgba(128,128,128,255);
 }
 
+@media only print{
+
+    @media print {
+        body {print-color-adjust: exact;}
+        }
+
+    /* .black_keys {
+        background-color: rgba(0,0,0,255) !important;
+        print-color-adjust: exact;
+    }
+
+    .white_keys {
+        background-color: none;
+    } */
+}
 
 @media only screen and (max-width: 599px) {
     .responsive_img {
@@ -155,12 +165,5 @@ body{
     
     #main_container{
         display: none;
-    }
-}
-
-@media print {
-    .black_keys {
-        background-color: rgba(0,0,0,255) !important;
-        print-color-adjust: exact;
     }
 }
